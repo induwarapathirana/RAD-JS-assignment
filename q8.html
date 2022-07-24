@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Question 8</title>
+    <style>
+      body{
+          margin-left: 0;
+          margin-top: 0;
+          font-family: verdana, sans-serif;
+
+      }
+      div.a{
+        background-color:#D3D3D3;
+        line-height: 1.6;
+        padding: 20px;
+        padding-left: 100px;
+      }
+      input[type=text]{
+        padding: 10px;
+        font-size: 15px;
+        color: grey;
+        box-sizing: border-box;
+        width: 20%;
+        border: 2px #D3D3D3;
+        border-radius: 4px;
+      }
+      input.b{
+        padding: 10px;
+        font-size: 15px;
+        color: grey;
+        box-sizing: border-box;
+        width: 20%;
+        border: 2px #D3D3D3;
+        border-radius: 4px;
+        background-color:#D3D3D3;
+      }
+    </style>
+  </head>
+  <script type="text/javascript">
+    function myFunction(){
+      var a = document.getElementById("userval").value;
+      var c = a*0.2;
+      var d = Number(a)+c;
+      document.getElementById("1").value = " " + c;
+      document.getElementById("2").value = a + "+"+ c + "=" + d;
+    }
+  </script>
+  <body>
+
+    <div class="a">
+      Insert the amount<br>
+      <input onmouseout = "myFunction()" id = "userval" type="text" value="Insert value"><br>
+      <label>20% of value:</label>
+      <input class="b" type="text" id="1"><br><br>
+      <label>Total</label>
+      <input class="b" type="text" id="2">
+    </div>
+
+  </body>
+</html>

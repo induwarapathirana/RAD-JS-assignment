@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Question2</title>
+    <style>
+      body{
+          margin-left: 0;
+          margin-top: 0;
+          font-family: verdana, sans-serif;
+
+      }
+      div{
+        background-color:#D3D3D3;
+        line-height: 1.6;
+        padding: 20px;
+        padding-left: 100px;
+      }
+
+      button{
+        -webkit-border-radius: 28;
+        -moz-border-radius: 28;
+        border-radius: 28px;
+        font-family: Arial;
+        color: #ffffff;
+        font-size: 20px;
+        background: #55d934;
+        padding: 10px 20px 10px 20px;
+        text-decoration: none;
+        border:none;
+      }
+
+
+
+
+
+    </style>
+  </head>
+  <script type="text/javascript">
+    function myFunction(){
+      var date = new Date();
+      var hours = date.getHours();
+      var minutes = date.getMinutes();
+      var ampm = hours >= 12 ? 'pm' : 'am';
+      hours = hours % 12;
+      hours = hours ? hours : 12; // the hour '0' should be '12'
+      minutes = minutes < 10 ? '0'+minutes : minutes;
+      var a = document.getElementById("a");
+      a.textContent = "Now the time is "+hours+"."+minutes+" "+ampm;
+      a.innerText = "Now the time is "+hours+"."+minutes+" "+ampm;
+      if(ampm == 'am'){
+          c.textContent = "Remains "+(24-hours)+" hours more....";
+          c.innerText = "Remains "+(24-hours)+" hours more....";
+      }else{
+        c.textContent = "Remains "+(12-hours)+" hours more....";
+        c.innerText = "Remains "+(12-hours)+" hours more....";
+      }
+    }
+
+  </script>
+
+  <body>
+    <div id="a" class="container"></div>
+    <div id="b" class="container">
+      <button id="c" onclick="myFunction()">Click me to find the remaining time</button>
+    </div>
+
+
+  </body>
+</html>

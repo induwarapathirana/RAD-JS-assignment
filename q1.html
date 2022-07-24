@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Question1</title>
+    <style>
+      body{
+          margin-left: 0;
+          margin-top: 0;
+          font-family: verdana, sans-serif;
+
+      }
+      div.a{
+        background-color:#D3D3D3;
+        line-height: 1.6;
+        padding: 20px;
+        padding-left: 100px;
+      }
+
+      input[type=text]{
+        padding: 10px;
+        font-size: 15px;
+        color: grey;
+        box-sizing: border-box;
+        width: 20%;
+        border: 2px #D3D3D3;
+        border-radius: 4px;
+      }
+
+     label{
+        font-weight: bold;
+
+      }
+
+      button{
+        -webkit-border-radius: 28;
+        -moz-border-radius: 28;
+        border-radius: 28px;
+        font-family: Arial;
+        color: #ffffff;
+        font-size: 20px;
+        background: #55d934;
+        padding: 10px 20px 10px 20px;
+        text-decoration: none;
+        border: none;
+      }
+
+
+
+
+    </style>
+  </head>
+  <script type="text/javascript">
+
+    function myFunction(){
+      let a = document.getElementById('1').value
+      let b = document.getElementById('2').value
+      alert("Your name is: "+a+"\nYour hometwon is: "+b);
+    }
+  </script>
+
+  <body>
+    <div class="a">
+      <form action="q1.html" method="post">
+        <label>Name:</label><br><br>
+        <input type="text" id="1" value="Insert name"><br><br>
+        <label>HomeTown:</label><br><br>
+        <input type="text" id="2" value="Insert HomeTown"><br><br>
+        <button onclick="myFunction()">Click me</button>
+      </form>
+    </div>
+
+
+
+  </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Question 7</title>
+    <style media="screen">
+
+      input[type=submit]{
+        -webkit-border-radius: 28;
+        -moz-border-radius: 28;
+        border-radius: 28px;
+        font-family: Arial;
+        color: #ffffff;
+        font-size: 20px;
+        background: #55d934;
+        padding: 10px 20px 10px 20px;
+        text-decoration: none;
+        border: none;
+      }
+    </style>
+  </head>
+  <script>
+  function checkChange(val){
+      var Name = document.getElementsByName(val.name);
+      var checked = document.getElementById(val.id);
+
+      if (checked.checked) {
+        for(var i=0; i < Name.length; i++){
+
+            if(!Name[i].checked){
+                Name[i].disabled = true;
+            }else{
+                Name[i].disabled = false;
+            }
+        }
+      }
+      else {
+        for(var i=0; i < Name.length; i++){
+          Name[i].disabled = false;
+        }
+      }
+  }
+  </script>
+  <body>
+    <h2>Available Hotel Packages</h2>
+    <form class="" action="q7.html" method="post">
+      <input type="checkbox" id="option1" name="option" onclick="checkChange(this)">
+      <label> Wedding Package</label><br>
+      <input type="checkbox" id="option2" name="option" onclick="checkChange(this)">
+      <label> BirthdayPackage</label><br>
+      <input type="checkbox" id="option3" name="option" onclick="checkChange(this)">
+      <label> Normal Function Package</label><br>
+      <input type="checkbox" id="option4" name="option" onclick="checkChange(this)">
+      <label> Day out Package</label><br><br>
+      <input type="submit" value="Submit">
+    </form>
+  </body>
+</html>
